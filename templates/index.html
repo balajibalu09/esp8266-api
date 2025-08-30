@@ -22,6 +22,9 @@
         <label for="shelf">Shelf:</label>
         <input type="text" id="shelf" name="shelf" value="{{ data['shelf'] }}" required>
 
+         <label for="shelf">Product:</label>
+        <input type="text" id="Product" name="Product" value="{{ data['Product'] }}" required>
+        
         <label for="price">Price:</label>
         <input type="number" id="price" name="price" step="0.01" value="{{ data['price'] }}" required>
 
@@ -34,6 +37,7 @@
     <div class="result">
         <h3>Current Data:</h3>
         <p><strong>Shelf:</strong> {{ data['shelf'] }}</p>
+        <p><strong>Product:</strong> {{ data['Product'] }}</p>
         <p><strong>Price:</strong> ₹{{ data['price'] }}</p>
         <p><strong>Discount:</strong> {{ data['discount'] }}%</p>
     </div>
@@ -41,4 +45,5 @@
 
 </body>
 </html>
+
 
