@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Initial data
 data = {
-    "shelf": "A1",
+    "shelf": "A1","Product": "A1",
     "price": 120.50,
     "discount": 10
 }
@@ -15,6 +15,7 @@ def home():
     if request.method == "POST":
         # Get data from the form and update
         data["shelf"] = request.form["shelf"]
+        data["Product"] = request.form["Product"]
         data["price"] = float(request.form["price"])
         data["discount"] = int(request.form["discount"])
     
@@ -27,3 +28,4 @@ def get_data():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
